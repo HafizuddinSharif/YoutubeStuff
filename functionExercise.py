@@ -19,11 +19,11 @@ def capitalizeWords(words) :
   
   return answer
 
+# Answer is ["what", "Hrllo", "Sharif", "happy"]
 words1 = ["what", "hrllo", "sharif", "happy"]
+
+# Answer is ["heyy", "Cempedak", "guli", "Gasing"]
 words2 = ["heyy", "cempedak", "guli", "gasing"]
-
-
-
 
 
 
@@ -40,8 +40,15 @@ def oddSum(numbers) :
 
   return total
 
+# Answer is 6
 numbers1 = [1, 2, 3, 4]
+
+# Answer is 104
 numbers2 = [2, 45, 66, 36]
+
+
+
+
 
 
 
@@ -54,18 +61,29 @@ numbers2 = [2, 45, 66, 36]
 
 def combinationLock(numberOfDigits, startLock, endLock) :
 
-  count = 0
+  totalCount = 0
 
   for x in range(numberOfDigits) :
     if (startLock[x] > endLock[x]) :
-      count = count + (startLock[x] - endLock[x])
+      spinCount = startLock[x] - endLock[x]
     else :
-      count = count + (endLock[x] - startLock[x])
+      spinCount = endLock[x] - startLock[x]
+
+    if spinCount > 5 :
+      totalCount = totalCount + (10 - spinCount)
+    else :
+      totalCount = totalCount + spinCount
     
-  return count
+  return totalCount
 
-numberOfDigits = 5
-startLock = [1, 2, 3, 7, 5]
-endLock = [2, 3, 4, 5, 6]
+# Answer is 7
+numberOfDigits1 = 5
+startLock1 = [1, 2, 3, 4, 5]
+endLock1 = [2, 3, 4, 7, 6]
 
-print(combinationLock(numberOfDigits, startLock, endLock))
+# Answer is 6
+numberOfDigits2 = 5
+startLock2 = [1, 2, 3, 1, 5]
+endLock2 = [2, 3, 4, 9, 6]
+
+print(combinationLock(numberOfDigits1, startLock1, endLock1))

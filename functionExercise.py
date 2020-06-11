@@ -50,11 +50,11 @@ print(evenSum(numbers1))
 print(evenSum(numbers2))
 
 
-def combinationLock(numberOfDigits, startLock, endLock):
+def combinationLock(startLock, endLock):
   
   totalCount = 0
 
-  for x in range(numberOfDigits) :
+  for x in range(5) :
     if (startLock[x] > endLock[x]) :
       spinCount = startLock[x] - endLock[x]
     else :
@@ -69,14 +69,12 @@ def combinationLock(numberOfDigits, startLock, endLock):
 
 
 # Answer is 7
-numberOfDigits1 = 5
 startLock1 = [1, 2, 3, 4, 5]
 endLock1 = [2, 3, 4, 7, 6]
 
 # Answer is 6
-numberOfDigits2 = 5
 startLock2 = [1, 2, 3, 1, 5]
 endLock2 = [2, 3, 4, 9, 6]
 
-print(combinationLock(numberOfDigits1, startLock1, endLock1))
-print(combinationLock(numberOfDigits2, startLock2, endLock2))
+print(combinationLock(startLock1, endLock1))
+print(combinationLock(startLock2, endLock2))

@@ -1,5 +1,5 @@
+# If word have 'f', 'r', 'm', 's'
 def capitalizeWords(words) :
-
   selectedLetters = "frms"
   answer = []
 
@@ -25,13 +25,12 @@ words1 = ["what", "hrllo", "sharif", "happy"]
 # Answer is ["heyy", "Cempedak", "guli", "Gasing"]
 words2 = ["heyy", "cempedak", "guli", "gasing"]
 
+print(capitalizeWords(words1))
+print(capitalizeWords(words2))
 
 
-
-
-
-def oddSum(numbers) :
-
+def evenSum(numbers) :
+  
   total = 0
 
   for number in numbers :
@@ -40,30 +39,22 @@ def oddSum(numbers) :
 
   return total
 
+
 # Answer is 6
 numbers1 = [1, 2, 3, 4]
 
 # Answer is 104
 numbers2 = [2, 45, 66, 36]
 
+print(evenSum(numbers1))
+print(evenSum(numbers2))
 
 
-
-
-
-
-
-
-
-
-
-
-
-def combinationLock(numberOfDigits, startLock, endLock) :
-
+def combinationLock(startLock, endLock):
+  
   totalCount = 0
 
-  for x in range(numberOfDigits) :
+  for x in range(5) :
     if (startLock[x] > endLock[x]) :
       spinCount = startLock[x] - endLock[x]
     else :
@@ -76,14 +67,14 @@ def combinationLock(numberOfDigits, startLock, endLock) :
     
   return totalCount
 
+
 # Answer is 7
-numberOfDigits1 = 5
 startLock1 = [1, 2, 3, 4, 5]
 endLock1 = [2, 3, 4, 7, 6]
 
 # Answer is 6
-numberOfDigits2 = 5
 startLock2 = [1, 2, 3, 1, 5]
 endLock2 = [2, 3, 4, 9, 6]
 
-print(combinationLock(numberOfDigits1, startLock1, endLock1))
+print(combinationLock(startLock1, endLock1))
+print(combinationLock(startLock2, endLock2))
